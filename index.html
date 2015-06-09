@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+{% for post in site.posts %}
+  <div class='pad4'>
+    <h1><a href='{{site.baseurl}}{{post.url}}'>{{post.title}}</a></h1>
+  </div>
+  <div class='pad2y pad4x'>
+    <div class='space-bottom2 quiet'>
+      Posted {{post.date | date: '%B %-d, %Y' }}
+    </div>
+    {{post.content}}
+  </div>
+{% endfor %}

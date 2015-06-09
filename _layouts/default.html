@@ -1,0 +1,26 @@
+---
+---
+<!DOCTYPE html >
+<html>
+<head>
+  <meta charset='UTF-8'/>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <meta name='twitter:site' content='@entirecities' />
+  <meta property='og:site_name' content='Entire Cities' />
+  <meta name='twitter:url' content='{{page.permalink}}' />
+  <meta property='og:url' content='{{page.permalink}}' />
+  <meta name='twitter:title' content='{{page.title | replace:"'","&lsquo;"}}' />
+  <meta property='og:title' content='{{page.title | replace:"'","&lsquo;"}}' />
+  <meta name='twitter:description' content='{{page.content | markdownify | strip_html | trim_spaces | truncatewords: 30 | escape | replace:"'","&lsquo;" }}' />
+  <meta property='og:description' content='{{page.content | markdownify | strip_html | trim_spaces | truncatewords: 30 | escape | replace:"'","&lsquo;" }}' />
+  <title>{% if page.url == '/' %}Entire Cities{% else %}Entire Cities | {{page.title}}{% endif %}</title>
+  <link rel='stylesheet' href='{{site.baseurl}}/site.css' type='text/css'/>
+  <link rel='shortcut icon' href='{{site.baseurl}}/img/favicon.png' type='image/x-icon' />
+</head>
+<body>
+  <div class='limiter fill-white clearfix'>
+    <h1 class='quiet small'><a href='{{site.baseurl}}/'>Entire Cities</a></h1>
+    {{content}}
+  </div>
+</body>
+</html>
