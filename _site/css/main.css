@@ -30,7 +30,8 @@ body {
   padding-bottom: 2rem;
 }
 .post-row img{
-  margin: 2rem 0
+  margin: 2rem auto;
+  display: block;
 }
 .post-link{
   font-size: 0.6em;
