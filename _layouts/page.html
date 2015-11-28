@@ -1,13 +1,14 @@
 ---
 layout: default
 ---
+<article class="post">
 
-<div class='pad4'>
-  <h1>{{page.title}}</h1>
-</div>
-<div class='pad2y pad4x'>
-  <div class='space-bottom2 quiet'>
-    Posted {{page.date | date: '%B %-d, %Y' }}
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+  </header>
+
+  <div class="post-content">
+    {{ content }}
   </div>
-  {{content}}
-</div>
+
+</article>

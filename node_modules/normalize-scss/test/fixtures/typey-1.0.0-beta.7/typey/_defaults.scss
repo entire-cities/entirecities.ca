@@ -1,0 +1,91 @@
+// The browser font size default. No need to change this.
+// Allowed units: px
+$browser-font-size:        16px !default;
+
+// Allowed units: rem, em or px
+$base-unit:                rem !default;
+
+// The base font size will be used for most calculations involving font-size.
+// Allowed units: px
+$base-font-size:           16px !default;
+
+// The base line height will be used for most calculations involving height.
+// Allowed units: px
+$base-line-height:         24px !default;
+
+// The method to calculate line-height. Allowed values: rhythm or ratio.
+// Rhytm uses a vertical rhythm approach where line-height is specified as
+// a multiple of the $base-line-height.
+// Ratio uses a ratio approach where line-height is specified as a ratio
+// of the elements font-size.
+$line-height-method:       rhythm !default;
+
+// The default ratio of line-height to font-size.
+$base-line-height-ratio:   1.5 !default;
+
+// By default we will provide fallbacks when rem is the base unit.
+$rem-fallback:             true !default;
+
+// By default, when rem or em are the base unit we will output a print suitable
+// media query with the define-type-sizing() mixin. This will take care of all
+// print media type sizing effortlessly.
+$auto-print-sizing:        true !default;
+
+// The pt font-size to be used with the print media query when
+// $auto-print-sizing is enabled.
+// Allowed units: pt
+$print-font-size:          12pt !default;
+
+// Default font sizes
+// Once you redefine the $font-size map it will overwrite all sizes here.
+// Allowed units: px
+$font-size: (
+  xxxl:                    60px,
+  xxl:                     46px,
+  xl:                      32px,
+  l:                       24px,
+  m:                       16px,
+  s:                       14px,
+  xs:                      12px
+) !default;
+
+// Default font weights
+// This map and accompanying function help provide granular control over
+// setting and retrieving static font weights.
+$font-weight: (
+  bold:                    700,
+  normal:                  400,
+  lighter:                 200
+) !default;
+
+// Debug grid
+// Shows horizontal lines for each elements line height.
+$typey-debug:              false !default;
+
+// Debug grid coloring
+$typey-debug-color:        #4affff !default;
+
+// Warnings for $base-unit.
+@if $base-unit != px and $base-unit != rem and $base-unit != em {
+  @error "$base-unit must be one of the following unit types: rem, em or px";
+}
+
+// Warnings for $base-font-size and $base-line-height.
+@if unit($base-font-size) != px {
+  @error "$base-font-size must be in px";
+}
+@if unit($base-line-height) != px {
+  @error "$base-line-height must be in px";
+}
+
+// Warnings for $print-font-size.
+@if unit($print-font-size) != pt {
+  @error "$print-font-size must be in pt";
+}
+
+// Warnings for $font-size
+@each $key, $size in $font-size {
+  @if unit($size) != px {
+    @error "Size '#{$key}' in $font-size map is not specified in px";
+  }
+}
