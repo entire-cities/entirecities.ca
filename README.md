@@ -1,15 +1,14 @@
 Entire Cities website
 ---
 
-### Install 
+### Built with
 
-Requires [Jekyll](http://jekyllrb.com). The easiest way to install on a Mac is 
-with [HomeBrew](http://brew.sh/) Install from the commandline via
+* [Jekyll](https://jekyllrb.com/)
+* [Foundation 6](http://foundation.zurb.com/sites/docs/)
+* [Normalize](https://necolas.github.io/normalize.css/)
 
-    brew install jekyll
+### Todos
 
-### Running
-
-Navigate to the directory this project is in an run
-
-    jekyll serve --watch
+* [ ] Keep it simple until Dave wants to work with SCSS, gulp, etc.
+* [ ] Simple way to make images in posts 12 column width?
+* [ ] Prototype video-switcher
