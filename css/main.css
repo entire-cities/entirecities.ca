@@ -1,0 +1,32 @@
+/**
+ * Basic styling
+ */
+
+body {
+    font: 400 16px / 1.5 "Old Standard TT", Big Caslon, Book Antiqua, Palatino Linotype, Georgia, serif;
+    color: #414141;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-feature-settings: "kern" 1;
+    -moz-font-feature-settings: "kern" 1;
+    -o-font-feature-settings: "kern" 1;
+    font-feature-settings: "kern" 1;
+    font-kerning: normal;
+}
+.site-header{
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+.site-title{
+  text-align: center;
+  font-size: 2em;
+}
+.site-title__link, .post-link{
+  color: #414141;
+}
+
+.site-header__nav{
+  text-align: center;
+}
+.post-row img{
+  margin: 2rem 0
+}
