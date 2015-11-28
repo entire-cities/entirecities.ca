@@ -3,7 +3,7 @@
  */
 
 body {
-    font: 400 16px / 1.5 "Old Standard TT", Big Caslon, Book Antiqua, Palatino Linotype, Georgia, serif;
+    font: 400 16px / 1.5 "Inconsolata", Big Caslon, Book Antiqua, Palatino Linotype, Georgia, serif;
     color: #414141;
     -webkit-text-size-adjust: 100%;
     -webkit-font-feature-settings: "kern" 1;
@@ -19,6 +19,7 @@ body {
 .site-title{
   text-align: center;
   font-size: 2em;
+  padding-top: 1rem;
 }
 .site-title__link, .post-link{
   color: #414141;
@@ -26,7 +27,17 @@ body {
 
 .site-header__nav{
   text-align: center;
+  padding-bottom: 2rem;
 }
 .post-row img{
   margin: 2rem 0
+}
+.post-link{
+  font-size: 0.6em;
+  text-decoration: underline;
+}
+.ascii-border::before, .ascii-border::after{
+  display: block;
+  text-align: center;
+  content: "######################################";
 }
