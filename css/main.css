@@ -29,6 +29,9 @@ body {
   text-align: center;
   padding-bottom: 2rem;
 }
+.post-row p{
+  margin:1rem 0 2rem;
+}
 .post-row img{
   margin: 2rem auto;
   display: block;
